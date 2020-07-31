@@ -1,0 +1,39 @@
+%!TEX program = pdflatex
+\documentclass[12pt]{article}
+% --importing files packages
+% for importing multiple files using standalone package
+% https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects#The_standalone_package
+% subpreambles means I need to have each imported file with its own
+% preamble in the file
+\usepackage[subpreambles=true]{standalone}
+\usepackage{import} % to actually import the tex files
+ 
+% my own custom stylepage, so I modify cools things like using custom
+% header and footer page styles using titlesec and titletoc etc.
+% \usepackage{custom-conf-style}
+
+
+\begin{document}
+\section{Symposium Title Section}
+This section will have the following sections:
+\begin{itemize}
+    \item Title page
+    \item Symposium presentation order
+    \item Student author title, advisor, and picture
+\end{itemize}
+
+% using templating block for pages
+\section{Abstracts}
+    \import{texsrc/}{abs-01}
+    \import{texsrc/}{abs-02}
+    \import{texsrc/}{abs-03}
+    \import{texsrc/}{abs-04}
+    \import{texsrc/}{abs-05}
+    \import{texsrc/}{abs-06}
+    \import{texsrc/}{abs-07}
+    \import{texsrc/}{abs-08}
+    \import{texsrc/}{abs-09}
+    \import{texsrc/}{abs-10}
+    \import{texsrc/}{abs-11}
+    \import{texsrc/}{abs-12}
+\end{document}
